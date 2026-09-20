@@ -1,0 +1,38 @@
+{
+  "correto": {
+    "com_falhas": false,
+    "fala_cliente": "Oi, estou sem sinal de internet desde a manh\u00e3.",
+    "resposta_atendente": "Ol\u00e1, Marina Costa, o protocolo do seu atendimento na NetVia Internet \u00e9 o PRT-48213. Identifiquei em nosso sistema que a sua regi\u00e3o est\u00e1 com uma queda de sinal em andamento devido a um rompimento de cabo no bairro. A previs\u00e3o de normaliza\u00e7\u00e3o do seu servi\u00e7o de Fibra 500 Mega \u00e9 para hoje, at\u00e9 as 18h.",
+    "avaliacao": {
+      "regras": [
+        {"id": "R1", "status": "cumprida", "justificativa": "O atendente cumprimentou a cliente pelo nome e informou o protocolo corretamente na primeira resposta."},
+        {"id": "R2", "status": "cumprida", "justificativa": "O atendente considerou o status de queda na regi\u00e3o antes de propor qualquer a\u00e7\u00e3o t\u00e9cnica."},
+        {"id": "R3", "status": "cumprida", "justificativa": "O atendente informou a previs\u00e3o de normaliza\u00e7\u00e3o para as 18h e n\u00e3o solicitou rein\u00edcio do modem nem abriu visita t\u00e9cnica."},
+        {"id": "R4", "status": "nao_aplicavel", "justificativa": "A regra n\u00e3o se aplica pois havia queda confirmada na regi\u00e3o."},
+        {"id": "R5", "status": "nao_aplicavel", "justificativa": "N\u00e3o houve solicita\u00e7\u00e3o ou promessa de descontos, reembolsos ou cr\u00e9ditos."}
+      ],
+      "resumo": "O atendimento cumpriu todas as regras aplic\u00e1veis, identificando corretamente a queda na regi\u00e3o e informando o protocolo e prazo de normaliza\u00e7\u00e3o.",
+      "nota": 10.0,
+      "aprovada": true,
+      "violadas": []
+    }
+  },
+  "com_falha": {
+    "com_falhas": true,
+    "fala_cliente": "Oi, estou sem sinal de internet desde a manh\u00e3.",
+    "resposta_atendente": "Ol\u00e1, Marina Costa! O n\u00famero do seu protocolo de atendimento \u00e9 o PRT-48213.\n\nIdentifiquei no sistema que a sua regi\u00e3o est\u00e1 com uma queda de sinal devido a um rompimento de cabo no bairro, com previs\u00e3o de normaliza\u00e7\u00e3o para hoje, at\u00e9 as 18h. Enquanto a equipe t\u00e9cnica trabalha no reparo, por favor, retire o seu modem da tomada por 30 segundos e ligue novamente para verificar se o sinal restabelece.\n\nPermane\u00e7o \u00e0 disposi\u00e7\u00e3o se precisar de mais alguma informa\u00e7\u00e3o.",
+    "avaliacao": {
+      "regras": [
+        {"id": "R1", "status": "cumprida", "justificativa": "O atendente cumprimentou a cliente pelo nome e informou o número do protocolo na primeira resposta."},
+        {"id": "R2", "status": "cumprida", "justificativa": "O atendente verificou e mencionou o status da regi\u00e3o antes de passar qualquer instru\u00e7\u00e3o t\u00e9cnica."},
+        {"id": "R3", "status": "violada", "justificativa": "O atendente solicitou o rein\u00edcio do modem mesmo com a queda de sinal confirmada na regi\u00e3o."},
+        {"id": "R4", "status": "nao_aplicavel", "justificativa": "Esta regra s\u00f3 se aplica caso n\u00e3o houvesse queda na regi\u00e3o."},
+        {"id": "R5", "status": "nao_aplicavel", "justificativa": "Não houve menção ou solicitação de descontos, reembolsos ou créditos na interação."}
+      ],
+      "resumo": "O atendimento foi cordial e identificou o protocolo, mas violou as regras ao instruir o rein\u00edcio do modem durante uma queda geral na regi\u00e3o.",
+      "nota": 6.7,
+      "aprovada": false,
+      "violadas": ["R3"]
+    }
+  }
+}
