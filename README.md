@@ -42,7 +42,7 @@ Para mudar as regras ou os cenários, edite `rules.py`.
 
 ## Visual
 
-A página usa a paleta de cores da Claro: vermelho `#DA291C` como cor principal, com preto,
+A página usa a paleta de cores abaixo :vermelho `#DA291C` como cor principal, com preto,
 branco e cinza claro de apoio. Não há nenhum logotipo da marca, só as cores.
 Para trocar a paleta, edite `.streamlit/config.toml` e a constante `VERMELHO_CLARO` no `app.py`.
 
