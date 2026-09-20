@@ -17,7 +17,7 @@ from openai import OpenAI
 load_dotenv()
 
 DEFAULT_MODEL = "qwen3-36-27b"
-DEFAULT_BASE_URL = "https://hub-gpus-lab.usto.re/v1"
+DEFAULT_BASE_URL = "https://colar_sua_url"
 PLACEHOLDER_KEY = "cole_sua_chave_aqui"
 NO_THINK_PREFIX = "/no_think\n"
 
